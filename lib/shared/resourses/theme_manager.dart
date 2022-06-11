@@ -11,7 +11,7 @@ ThemeData getApplicationTheme() {
   return ThemeData(
     //  main colors of the app
     scaffoldBackgroundColor: Colors.white,
-    primaryColor: ColorManager.primaryColor,
+    primaryColor: ColorManager.kPrimaryColor,
     primaryColorLight: ColorManager.primaryOpacity70,
     primaryColorDark: ColorManager.darkPrimary,
     disabledColor: ColorManager.grey1,
@@ -46,14 +46,14 @@ ThemeData getApplicationTheme() {
     buttonTheme: ButtonThemeData(
         shape: const StadiumBorder(),
         disabledColor: ColorManager.grey1,
-        buttonColor: ColorManager.primaryColor,
+        buttonColor: ColorManager.kPrimaryColor,
         splashColor: ColorManager.primaryOpacity70),
 
     //Elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
             textStyle: getRegularStyle(color: ColorManager.white),
-            primary: ColorManager.primaryColor,
+            primary: ColorManager.kPrimaryColor,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(AppSize.s12)))),
 
@@ -62,7 +62,7 @@ ThemeData getApplicationTheme() {
         headline1: getSemiBoldStyle(
             color: ColorManager.blueColor, fontSize: FontSize.s16),
         subtitle1: getMediumStyle(
-            color: ColorManager.primaryColor, fontSize: FontSize.s14),
+            color: ColorManager.kPrimaryColor, fontSize: FontSize.s14),
         caption: getRegularStyle(color: ColorManager.grey1),
         bodyText1: getRegularStyle(color: ColorManager.grey)),
 
@@ -78,7 +78,7 @@ ThemeData getApplicationTheme() {
       ),
       focusedBorder: OutlineInputBorder(
         borderSide:
-            BorderSide(color: ColorManager.primaryColor, width: AppSize.s1_5),
+            BorderSide(color: ColorManager.kPrimaryColor, width: AppSize.s1_5),
         borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
       errorBorder: OutlineInputBorder(

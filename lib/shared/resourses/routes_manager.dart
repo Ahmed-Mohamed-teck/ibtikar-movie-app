@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ibtikartask/model/person_model.dart';
 
+import '../../modules/details_screen/person_details_screen.dart';
 import '../../modules/home/home_screen.dart';
 import '../../modules/splash/splash_screen.dart';
 
@@ -8,6 +10,7 @@ import '../../modules/splash/splash_screen.dart';
 class Routes {
   static const String splashScreen = '/splash_screen';
   static const String homeScreen = '/home';
+  static const String personDetailsScreen = '/person_details_screen';
 
 }
 
@@ -20,7 +23,9 @@ class RouteGenerator {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return MaterialPageRoute(builder: (_) => HomeScreen());
+      case Routes.personDetailsScreen:
+        return MaterialPageRoute(builder: (_) =>  PersonDetailsScreen(personModel: args as PersonModel,));
       default:
         return unDefinedRoute();
     }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ibtikartask/shared/resourses/color_manager.dart';
+import 'package:sizer/sizer.dart';
 
+import '../../helper/constant.dart';
 import 'font_manager.dart';
 
 TextStyle _getTextStyle(double fontSize, String fontFamily,
@@ -8,6 +11,7 @@ TextStyle _getTextStyle(double fontSize, String fontFamily,
         fontSize: fontSize,
         fontFamily: fontFamily,
         fontWeight: fontWeight,
+        shadows: kTextShadow,
         color: color);
 
 // regular style
@@ -43,3 +47,8 @@ TextStyle getMediumStyle(
   return _getTextStyle(
       fontSize, FontConstant.fontFamily, FontWeightManager.medium, color);
 }
+
+final kSubTitleCardBoxTextStyle = TextStyle(
+  color: ColorManager.kSubTitleCardBoxColor,
+  fontSize: 9.sp,
+);
