@@ -223,7 +223,7 @@ class _PicSwiperState extends State<PicSwiper>
                       icon: const Icon(Icons.save_alt),
                       onPressed: () {
                         OpenFileServices fileService =OpenFileServices();
-                        fileService.downloadOrOpen('$kThemoviedbImageURL${widget.pics[0].picUrl!}', context);
+                        fileService.downloadOrOpen('$kThemoviedbImageURL${widget.pics[currentIndex??0].picUrl!}', context);
                       }),
                 )
               ],
