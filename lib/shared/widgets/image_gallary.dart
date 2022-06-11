@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' hide Image;
 
 import '../../data/api_routes.dart';
+import '../../helper/open_file_services.dart';
 
 class ImageGalery extends StatelessWidget {
   final List? images;
@@ -133,6 +134,7 @@ class _PicSwiperState extends State<PicSwiper>
                             //remember call clearGestureDetailsCache() method at the right time.(for example,this page dispose)
                             cacheGesture: false);
                       },
+
                       onDoubleTap: (ExtendedImageGestureState state) {
                         var pointerDownPosition = state.pointerDownPosition;
                         var begin = state.gestureDetails!.totalScale;
@@ -212,6 +214,16 @@ class _PicSwiperState extends State<PicSwiper>
                       icon: const Icon(Icons.close),
                       onPressed: () {
                         Navigator.pop(context);
+                      }),
+                ),
+                Positioned(
+                  top: 10,
+                  left: 10,
+                  child: IconButton(
+                      icon: const Icon(Icons.save_alt),
+                      onPressed: () {
+                        OpenFileServices fileService =OpenFileServices();
+                        fileService.downloadOrOpen('$kThemoviedbImageURL${widget.pics[0].picUrl!}', context);
                       }),
                 )
               ],

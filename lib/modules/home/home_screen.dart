@@ -24,8 +24,9 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, indx) => model.personCards[indx],
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  crossAxisSpacing: 5.0,
-                  mainAxisSpacing: 5.0,
+                  childAspectRatio:.75 ,
+                  crossAxisSpacing: 1,
+                  mainAxisSpacing: 1,
                 ),
               ),
             ),

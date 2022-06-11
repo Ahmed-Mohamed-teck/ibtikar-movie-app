@@ -48,7 +48,6 @@ class PersonCard extends StatelessWidget {
                     children: [
                       SizedBox(
                           height: 20.h,
-                          //todo change this default progressIndicator
                           child: const CircularProgressIndicator()
                       )
                     ],

@@ -1,3 +1,7 @@
 {
-  "splashMSG": "this is splash screen"
+  "canNotDownload": "Can not Downlaod",
+  "done": "Done",
+  "pleaseWait": "please wait",
+  "downloading": "downloading",
+  "openFile": "open File"
 }

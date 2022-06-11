@@ -22,7 +22,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "splashMSG":
-            MessageLookupByLibrary.simpleMessage("this is splash screen")
+        "canNotDownload":
+            MessageLookupByLibrary.simpleMessage("Can not Downlaod"),
+        "done": MessageLookupByLibrary.simpleMessage("Done"),
+        "downloading": MessageLookupByLibrary.simpleMessage("downloading"),
+        "openFile": MessageLookupByLibrary.simpleMessage("open File"),
+        "pleaseWait": MessageLookupByLibrary.simpleMessage("please wait")
       };
 }

@@ -171,7 +171,7 @@ class _PersonDetailsScreenState extends State<PersonDetailsScreen> {
                       child:  Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(widget.personModel.name??'',style: getBoldStyle(color: ColorManager.kBlackColor),),
+                          Expanded(child: Text(widget.personModel.name??'',style: getBoldStyle(color: ColorManager.kBlackColor),)),
                           Text(widget.personModel.knownForDepartment??'',style: getBoldStyle(color: ColorManager.kBlackColor),),
                         ],
                       ),
@@ -209,8 +209,8 @@ class _PersonDetailsScreenState extends State<PersonDetailsScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(item.title??'',style: getBoldStyle(color: ColorManager.kBlackColor),),
-                      Text(item.mediaType??'',style: getBoldStyle(color: ColorManager.kBlackColor),),
+                      Expanded(child: Text(item.title??'place text',style: getBoldStyle(color: ColorManager.kBlackColor),)),
+                      Text(item.mediaType??'',style: getBoldStyle(color: ColorManager.kBlackColor),softWrap: true,),
                     ],
                   ),
                 ),

@@ -35,7 +35,7 @@ class HomeService{
             knownForDepartment:item['known_for_department'],
             name: item['name'],
             popularity: double.parse(item['popularity'].toString()),
-            profilePath: (item["profile_path"]!=null)?"$kThemoviedbImageURL${item["profile_path"]}":"https://i0.wp.com/smawatan.com/wp-content/uploads/2022/06/%D9%85%D9%86-%D9%87%D9%8A-%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A9-%D8%B3%D9%86%D9%8A%D8%A9-%D8%AD%D8%A8%D9%91%D9%88%D8%A8.jpg?resize=780%2C470&ssl=1",
+            profilePath: (item["profile_path"]!=null)?"$kThemoviedbImageURL${item["profile_path"]}":"https://i.redd.it/mn9c32es4zi21.png",
           ),
           themeColor: Colors.red,
         ),

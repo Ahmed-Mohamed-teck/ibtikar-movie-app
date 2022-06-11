@@ -5,6 +5,7 @@ import 'package:ibtikartask/modules/home/home_view_model.dart';
 import 'package:provider/provider.dart';
 
 import '../../helper/dio_helper.dart';
+import '../../shared/resourses/assets_manager.dart';
 import '../../shared/resourses/routes_manager.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -34,10 +35,10 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Image.asset(
-            //   AppAssets.logo,
-            //   width: MediaQuery.of(context).size.width * .6,
-            // ),
+            Image.asset(
+              AppAssets.logo,
+              width: MediaQuery.of(context).size.width * .6,
+            ),
             Padding(
               padding: const EdgeInsets.only(top: 12),
               child: SizedBox(

@@ -50,11 +50,51 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `this is splash screen`
-  String get splashMSG {
+  /// `Can not Downlaod`
+  String get canNotDownload {
     return Intl.message(
-      'this is splash screen',
-      name: 'splashMSG',
+      'Can not Downlaod',
+      name: 'canNotDownload',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Done`
+  String get done {
+    return Intl.message(
+      'Done',
+      name: 'done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `please wait`
+  String get pleaseWait {
+    return Intl.message(
+      'please wait',
+      name: 'pleaseWait',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `downloading`
+  String get downloading {
+    return Intl.message(
+      'downloading',
+      name: 'downloading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `open File`
+  String get openFile {
+    return Intl.message(
+      'open File',
+      name: 'openFile',
       desc: '',
       args: [],
     );
