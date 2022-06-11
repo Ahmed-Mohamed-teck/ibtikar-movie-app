@@ -1,3 +1,6 @@
+
+import 'package:ibtikartask/model/known_for.dart';
+
 class PersonModel {
   bool? adult;
   int? gender;
@@ -25,7 +28,7 @@ class PersonModel {
     if (json['known_for'] != null) {
       knownFor = <KnownFor>[];
       json['known_for'].forEach((v) {
-        knownFor!.add(new KnownFor.fromJson(v));
+        knownFor!.add(KnownFor.fromJson(v));
       });
     }
     knownForDepartment = json['known_for_department'];
@@ -35,86 +38,18 @@ class PersonModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['adult'] = this.adult;
-    data['gender'] = this.gender;
-    data['id'] = this.id;
-    if (this.knownFor != null) {
-      data['known_for'] = this.knownFor!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['adult'] = adult;
+    data['gender'] = gender;
+    data['id'] = id;
+    if (knownFor != null) {
+      data['known_for'] = knownFor!.map((v) => v.toJson()).toList();
     }
-    data['known_for_department'] = this.knownForDepartment;
-    data['name'] = this.name;
-    data['popularity'] = this.popularity;
-    data['profile_path'] = this.profilePath;
+    data['known_for_department'] = knownForDepartment;
+    data['name'] = name;
+    data['popularity'] = popularity;
+    data['profile_path'] = profilePath;
     return data;
   }
 }
 
-class KnownFor {
-  bool? adult;
-  String? backdropPath;
-  List<int>? genreIds;
-  int? id;
-  String? mediaType;
-  String? originalLanguage;
-  String? originalTitle;
-  String? overview;
-  String? posterPath;
-  String? releaseDate;
-  String? title;
-  bool? video;
-  double? voteAverage;
-  int? voteCount;
-
-  KnownFor(
-      {this.adult,
-        this.backdropPath,
-        this.genreIds,
-        this.id,
-        this.mediaType,
-        this.originalLanguage,
-        this.originalTitle,
-        this.overview,
-        this.posterPath,
-        this.releaseDate,
-        this.title,
-        this.video,
-        this.voteAverage,
-        this.voteCount});
-
-  KnownFor.fromJson(Map<String, dynamic> json) {
-    adult = json['adult'];
-    backdropPath = json['backdrop_path'];
-    genreIds = json['genre_ids'].cast<int>();
-    id = json['id'];
-    mediaType = json['media_type'];
-    originalLanguage = json['original_language'];
-    originalTitle = json['original_title'];
-    overview = json['overview'];
-    posterPath = json['poster_path'];
-    releaseDate = json['release_date'];
-    title = json['title'];
-    video = json['video'];
-    voteAverage = 7.4;
-    voteCount = json['vote_count'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['adult'] = this.adult;
-    data['backdrop_path'] = this.backdropPath;
-    data['genre_ids'] = this.genreIds;
-    data['id'] = this.id;
-    data['media_type'] = this.mediaType;
-    data['original_language'] = this.originalLanguage;
-    data['original_title'] = this.originalTitle;
-    data['overview'] = this.overview;
-    data['poster_path'] = this.posterPath;
-    data['release_date'] = this.releaseDate;
-    data['title'] = this.title;
-    data['video'] = this.video;
-    data['vote_average'] = this.voteAverage;
-    data['vote_count'] = this.voteCount;
-    return data;
-  }
-}

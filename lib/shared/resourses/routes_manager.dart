@@ -23,7 +23,7 @@ class RouteGenerator {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.personDetailsScreen:
         return MaterialPageRoute(builder: (_) =>  PersonDetailsScreen(personModel: args as PersonModel,));
       default:

@@ -36,7 +36,7 @@ class PersonCard extends StatelessWidget {
                   placeholder: (context, url) => Column(
 
                     children: [
-                      Container(
+                      SizedBox(
                         height: 20.h,
                         child: CustomLoadingSpinKitRing(
                             loadingColor: themeColor),

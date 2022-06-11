@@ -1,19 +1,11 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:ibtikartask/helper/base_notifier.dart';
-import 'package:ibtikartask/helper/dio_helper.dart';
-import 'package:ibtikartask/model/person_model.dart';
 import 'package:ibtikartask/modules/home/service/home_service.dart';
 import 'package:ibtikartask/shared/widgets/person_card.dart';
 
-import '../../data/api_routes.dart';
 
-enum MoviePageType {
-  popular,
-  upcoming,
-  top_rated,
-}
+
 
 class HomeViewModel extends BaseNotifier {
 

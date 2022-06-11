@@ -5,7 +5,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 class CustomLoadingSpinKitRing extends StatelessWidget {
   final Color? loadingColor;
 
-  CustomLoadingSpinKitRing({
+  const CustomLoadingSpinKitRing({
     required this.loadingColor,
   });
 

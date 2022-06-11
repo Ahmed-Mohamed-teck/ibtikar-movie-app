@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../data/api_routes.dart';
 import '../../../helper/dio_helper.dart';
+import '../../../model/known_for.dart';
 import '../../../model/person_model.dart';
 import '../../../shared/widgets/person_card.dart';
 
